@@ -150,3 +150,7 @@ def firstReact():
     # return flask.redirect('/')
 
 
+@app.route('/addfav', methods=['POST'])
+def addFav():
+    user = flask.request.form['username']
+    
