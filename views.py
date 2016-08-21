@@ -153,5 +153,9 @@ def firstReact():
 @app.route('/addfav', methods=['POST'])
 def addFav():
     user = flask.request.form['username']
+    propertyId = flask.request.form['propertyId']
+    comment = flask.request.form['comment']
+    
+    
     return "poo poo"
     
