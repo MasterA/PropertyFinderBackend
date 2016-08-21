@@ -152,9 +152,15 @@ def firstReact():
 
 @app.route('/addfav', methods=['POST'])
 def addFav():
+    
+    print(flask.request)
     user = flask.request.form['username']
     propertyId = flask.request.form['propertyId']
     comment = flask.request.form['comment']
+    newFavorite = models.Favorite(user,propertyId, comment )
+    
+    db.session.add(newFavorite)
+    db.session.commit()
     
     
     return "poo poo"
