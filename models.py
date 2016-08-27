@@ -23,7 +23,7 @@ class Favorite(db.Model):
     
     username = db.Column(db.String(60))
     property_id = db.Column(db.String(60))
-    comment = db.Text()
+    comment = db.Column(db.String(100))
     
     def __init__(self,username, property_id, comment):
         self.username = username
