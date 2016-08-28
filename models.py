@@ -17,20 +17,22 @@ class User(db.Model):
         self.password = password
 
 
-#
-# class Favorite(db.Model):
-#     __tablename__ = 'favorites'
-#
-#     username = db.Column(db.String(60))
-#     property_id = db.Column(db.String(60))
-#     comment = db.Column(db.String(100))
-#
-#     def __init__(self,username, property_id, comment):
-#         self.username = username
-#         self.property_id = property_id
-#         self.comment = comment
-#
-#
+
+class Favorite(db.Model):
+    __tablename__ = 'favorites'
+
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+
+    username = db.Column(db.String(60))
+    property_id = db.Column(db.String(60))
+    comment = db.Column(db.String(100))
+
+    def __init__(self,username, property_id, comment):
+        self.username = username
+        self.property_id = property_id
+        self.comment = comment
+
+
     
     
 #create
